@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "update": "^0.7.4"
+  },
+  "name": "web-apps-main",
+  "description": "Terapic-Fisic-Helper Web-Apps - Frontend - Vue - Vuetify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
