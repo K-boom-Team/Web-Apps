@@ -13,12 +13,13 @@
         <v-divider class="mx-4" inset vertical />
         <v-spacer></v-spacer>
         <v-text-field
-          label="Search Reviews"
-          append-icon="search"
-          class="text-xs-center"
-          v-model="search"
-          single-line
-          hide-details
+            id="review-search"
+            label="Search Reviews"
+            append-icon="search"
+            class="text-xs-center"
+            v-model="search"
+            single-line
+            hide-details
         ></v-text-field>
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" max-width="500px">
@@ -37,23 +38,30 @@
                 <v-row>
                   <v-col cols="12" sm="12" md="12">
                     <v-text-field
-                      v-model="description"
-                      label="Description"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="12" md="12">
-                    <v-text-field v-model="rank" label="Rank"></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="12" md="12">
-                    <v-text-field
-                      v-model="customerId"
-                      label="CustomerId"
+                        id="review-description"
+                        v-model="description"
+                        label="Description"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="12" md="12">
                     <v-text-field
-                      v-model="specialistId"
-                      label="SpecialistId"
+                        id="review-rank"
+                        v-model="rank"
+                        label="Rank">
+                    </v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="12" md="12">
+                    <v-text-field
+                        id="review-customerId"
+                        v-model="customerId"
+                        label="CustomerId"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="12" md="12">
+                    <v-text-field
+                        id="review-specialistId"
+                        v-model="specialistId"
+                        label="SpecialistId"
                     ></v-text-field>
                   </v-col>
                 </v-row>
@@ -61,8 +69,8 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
-              <v-btn color="blue darken-1" text @click="save">Save</v-btn>
+              <v-btn id="review-cancel" color="blue darken-1" text @click="close">Cancel</v-btn>
+              <v-btn id="review-save" color="blue darken-1" text @click="save">Save</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>

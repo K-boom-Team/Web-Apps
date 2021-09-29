@@ -111,12 +111,12 @@ p {
 
         <p class="subheading font-weight-regular" id="links-design">
           Descubre que le sucede a tu cuerpo, y como puedes solucionar tus
-          molestias conectate con los mejores profesionales en rehabilitación
+          molestias conéctate con los mejores profesionales en rehabilitación
           <br />¡Desde la comodidad de tu hogar!
           <a
             href="https://terapic-fisic-helper.github.io/Landing-Page/"
             target="_blank"
-            >Nuesto Landing Page</a
+            >Nuestro Landing Page</a
           >
         </p>
       </v-col>
@@ -132,8 +132,8 @@ p {
             Para el Paciente
           </a>
           <a class="subheading mx-3" target="_blank">
-            Para el Terapista -
-            <br />Centro de Terapia
+            -  Para el Terapista  -
+            <br /> Centro de Terapia
           </a>
           <a class="subheading mx-3" target="_blank">
             Para el Familiar

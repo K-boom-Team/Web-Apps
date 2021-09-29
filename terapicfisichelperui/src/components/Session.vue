@@ -13,12 +13,13 @@
         <v-divider class="mx-4" inset vertical />
         <v-spacer></v-spacer>
         <v-text-field
-          label="Search Session"
-          append-icon="search"
-          class="text-xs-center"
-          v-model="search"
-          single-line
-          hide-details
+            id="session-search"
+            label="Search Session"
+            append-icon="search"
+            class="text-xs-center"
+            v-model="search"
+            single-line
+            hide-details
         ></v-text-field>
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" max-width="500px">
@@ -37,35 +38,44 @@
                 <v-row>
                   <v-col cols="12" sm="12" md="12">
                     <v-text-field
-                      v-model="specialistId"
-                      label="SpecialistId"
-                    ></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="12" md="12">
-                    <v-text-field v-model="title" label="Title"></v-text-field>
-                  </v-col>
-                  <v-col cols="12" sm="12" md="12">
-                    <v-text-field
-                      v-model="description"
-                      label="Description"
+                        id="session-specialistId"
+                        v-model="specialistId"
+                        label="SpecialistId"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="12" md="12">
                     <v-text-field
-                      type="date"
-                      v-model="startDate"
-                      label="StartDate"
+                        id="session-title"
+                        v-model="title"
+                        label="Title">
+                    </v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="12" md="12">
+                    <v-text-field
+                        id="session-description"
+                        v-model="description"
+                        label="Description"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="12" md="12">
                     <v-text-field
-                      type="datetime"
-                      v-model="startHour"
-                      label="StartHour"
+                        id="session-startDate"
+                        type="date"
+                        v-model="startDate"
+                        label="StartDate"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="12" md="12">
                     <v-text-field
+                        id="session-startHour"
+                        type="datetime"
+                        v-model="startHour"
+                        label="StartHour"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="12" md="12">
+                    <v-text-field
+                        id="session-endHour"
                       type="datetime"
                       v-model="endHour"
                       label="EndHour"
@@ -84,8 +94,8 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
-              <v-btn color="blue darken-1" text @click="save">Save</v-btn>
+              <v-btn id="session-cancel" color="blue darken-1" text @click="close">Cancel</v-btn>
+              <v-btn id="session-save" color="blue darken-1" text @click="save">Save</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -101,8 +111,8 @@
         <td>{{ item.endHour }}</td>
 
         <td class="justify-center layout px-0">
-          <v-icon small class="mr-2" @click="editItem(item)">edit</v-icon>
-          <v-icon small class="mr-2" @click="deleteItem(item)">delete</v-icon>
+          <v-icon id="session-edit" small class="mr-2" @click="editItem(item)">edit</v-icon>
+          <v-icon id="session-delete" small class="mr-2" @click="deleteItem(item)">delete</v-icon>
         </td>
       </tr>
     </template>

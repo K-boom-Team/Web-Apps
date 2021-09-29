@@ -8,16 +8,17 @@
   >
     <template v-slot:top>
       <v-toolbar flat color="white">
-        <v-toolbar-title>Customer Lists</v-toolbar-title>
+        <v-toolbar-title>Customer List</v-toolbar-title>
         <v-divider class="mx-4" inset vertical />
         <v-spacer></v-spacer>
         <v-text-field
-          label="Search Customer"
-          append-icon="search"
-          class="text-xs-center"
-          v-model="search"
-          single-line
-          hide-details
+            id="customer-search"
+            label="Search Customer"
+            append-icon="search"
+            class="text-xs-center"
+            v-model="search"
+            single-line
+            hide-details
         ></v-text-field>
         <v-spacer></v-spacer>
         <v-dialog v-model="dialog" max-width="500px">
@@ -36,14 +37,16 @@
                 <v-row>
                   <v-col cols="12" sm="12" md="12">
                     <v-text-field
-                      v-model="description"
-                      label="Description"
+                        id="customer-description"
+                        v-model="description"
+                        label="Description"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="12" md="12">
                     <v-text-field
-                      v-model="userId"
-                      label="UserId"
+                        id="customer-userId"
+                        v-model="userId"
+                        label="UserId"
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="12" md="12" v-show="isValidName">
@@ -59,8 +62,8 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
-              <v-btn color="blue darken-1" text @click="save">Save</v-btn>
+              <v-btn id="customer-cancel" color="blue darken-1" text @click="close">Cancel</v-btn>
+              <v-btn id="customer-save" color="blue darken-1" text @click="save">Save</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -72,8 +75,8 @@
         <td>{{ item.userId }}</td>
 
         <td class="justify-center layout px-0">
-          <v-icon small class="mr-2" @click="editItem(item)">edit</v-icon>
-          <v-icon small class="mr-2" @click="deleteItem(item)">delete</v-icon>
+          <v-icon id="customer-edit" small class="mr-2" @click="editItem(item)">edit</v-icon>
+          <v-icon id="customer-delete" small class="mr-2" @click="deleteItem(item)">delete</v-icon>
         </td>
       </tr>
     </template>
