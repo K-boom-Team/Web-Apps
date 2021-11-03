@@ -112,6 +112,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-review-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Review Button Click',
+        'value': 1
+      })
       return "New Reviews";
     },
   },

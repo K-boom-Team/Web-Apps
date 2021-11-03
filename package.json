@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "update": "^0.4.2"
+    "update": "^0.4.2",
+    "vue-analytics": "^5.22.1"
   },
   "name": "web-apps-main",
   "description": "Terapic-Fisic-Helper Web-Apps - Frontend - Vue - Vuetify",

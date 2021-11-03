@@ -117,6 +117,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-subscription-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Subscription Button Click',
+        'value': 1
+      })
       return "New Subscriptions";
     },
   },

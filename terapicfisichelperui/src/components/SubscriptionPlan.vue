@@ -110,6 +110,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-subscription-plan-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Subscription Plan Button Click',
+        'value': 1
+      })
       return this.editedIndex === -1
         ? "New SubscriptionPlan"
         : "Edit SubscriptionPlan";

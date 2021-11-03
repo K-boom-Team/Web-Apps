@@ -102,6 +102,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-historie-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Historie Button Click',
+        'value': 1
+      })
       return "New Histories";
     },
   },

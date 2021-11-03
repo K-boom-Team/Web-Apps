@@ -110,6 +110,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-specialist-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Specialist Button Click',
+        'value': 1
+      })
       return this.editedIndex === -1 ? "New Specialist" : "Edit Specialist";
     },
   },

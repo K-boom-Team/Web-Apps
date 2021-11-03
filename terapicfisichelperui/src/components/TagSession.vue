@@ -85,6 +85,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-tag-session-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Tag Session Button Click',
+        'value': 1
+      })
       return "New TagSessions";
     },
   },

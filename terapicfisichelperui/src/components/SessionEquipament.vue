@@ -101,6 +101,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-session-equipment-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Session Equipment Button Click',
+        'value': 1
+      })
       return "New EquipamentSessions";
     },
   },

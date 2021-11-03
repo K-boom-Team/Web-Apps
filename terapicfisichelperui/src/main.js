@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import axios from 'axios'
+import VueGtag from 'vue-gtag';
 
 Vue.config.productionTip = false
 
@@ -16,3 +17,10 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+
+Vue.config.productionTip = false;
+
+// Configuration VueAnalytics
+Vue.use(VueGtag, {
+  config: { id: "UA-209091372-2" }
+});

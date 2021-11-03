@@ -109,6 +109,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-customer-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Customer Button Click',
+        'value': 1
+      })
       return this.editedIndex === -1 ? "New Customer" : "Edit Customer";
     },
   },

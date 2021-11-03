@@ -102,6 +102,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-tag-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Tag Button Click',
+        'value': 1
+      })
       return this.editedIndex === -1 ? "New Tag" : "Edit Tag";
     },
   },

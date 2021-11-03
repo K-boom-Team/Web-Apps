@@ -200,6 +200,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-user-click', {
+        'event_category': 'documentation',
+        'event_label': 'New User Button Click',
+        'value': 1
+        })
       return this.editedIndex === -1 ? "New User" : "Edit User";
     },
   },

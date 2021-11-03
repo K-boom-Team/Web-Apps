@@ -153,6 +153,11 @@ export default {
   }),
   computed: {
     formTitle() {
+      this.$gtag.event('new-session-click', {
+        'event_category': 'documentation',
+        'event_label': 'New Session Button Click',
+        'value': 1
+      })
       return this.editedIndex === -1 ? "New Session" : "Edit Session";
     },
   },
