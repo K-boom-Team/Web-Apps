@@ -76,6 +76,7 @@
         <td>{{ item.specialty }}</td>
 
         <td class="justify-center layout px-0">
+          <v-icon id="specialist-profile" @click="navigateToSpecialistProfile(item.id)">{{icons.mdiAccount}} </v-icon>
           <v-icon id="specialist-edit" small class="mr-2" @click="editItem(item)">edit</v-icon>
           <v-icon id="specialist-delete" small class="mr-2" @click="deleteItem(item)">delete</v-icon>
         </td>
@@ -90,6 +91,7 @@
 
 <script>
 import axios from "axios";
+import { mdiAccount } from "@mdi/js"
 
 export default {
   data: () => ({
@@ -107,6 +109,9 @@ export default {
       { text: "Specialty", value: "specialty", sortable: true },
       { text: "Actions", value: "actions", sortable: false },
     ],
+    icons: {
+      mdiAccount
+    }
   }),
   computed: {
     formTitle() {
@@ -225,6 +230,9 @@ export default {
       }
       return this.valid;
     },
+    navigateToSpecialistProfile(id) {
+      this.$router.push({name:'specialist-profile', params: {id:id}})
+    }
   },
 };
 </script>

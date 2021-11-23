@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import User from '../components/User.vue'
 import Customer from '../components/Customer.vue'
 import Specialist from '../components/Specialist.vue'
+import SpecialistProfile from '../components/specialist-profile.vue'
 import Session from '../components/Session.vue'
 import Equipament from '../components/Equipament.vue'
 import SessionEquipament from '../components/SessionEquipament.vue'
@@ -36,6 +37,11 @@ const routes = [
     path: '/specialists',
     name: 'specialists',
     component: Specialist
+  },
+  {
+    path: '/specialists/:id/profile',
+    name: 'specialist-profile',
+    component: SpecialistProfile
   },
   {
     path: '/sessions',

@@ -99,6 +99,16 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
+        <v-dialog v-model="confirmationDialog" max-width="450">
+          <v-card>
+            <v-card-title class="justify-center">Confirmación de reserva</v-card-title>
+            <v-card-text>Se ha registrado satisfactoriamente tu sesión de rehabilitación.</v-card-text>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn id="session-cancel" color="blue darken-1" text @click="closeDialog">Aceptar</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
       </v-toolbar>
     </template>
     <template v-slot:item="{ item }">
@@ -137,6 +147,7 @@ export default {
     startHour: "",
     endHour: "",
     dialog: false,
+    confirmationDialog: false,
     editedIndex: -1,
     sessions: [],
     valid: 0,
@@ -212,6 +223,9 @@ export default {
     close() {
       this.dialog = false;
     },
+    closeDialog() {
+      this.confirmationDialog = false;
+    },
     clean() {
       this.id = "";
       this.specialistId = "";
@@ -259,6 +273,7 @@ export default {
             me.close();
             me.listSessions();
             me.clean();
+            me.confirmationDialog = true;
           })
           .catch(function(error) {
             console.log(error);
